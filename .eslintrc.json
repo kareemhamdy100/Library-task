@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "plugins": [
+    "chai-friendly"
+  ],
+  "rules": {
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "linebreak-style": "off",
+    "indent": [
+      "error",
+      4
+    ],
+    "class-methods-use-this": "off"
+  }
+}
