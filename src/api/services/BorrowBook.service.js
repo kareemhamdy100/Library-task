@@ -125,7 +125,7 @@ module.exports = class BorrowerService {
                 error.status = HTTP_CODES.BAD_REQUEST;
                 throw error;
             }
-            await borrowedBook.update(
+            const borrowBookAfterUpdate = await borrowedBook.update(
                 {
                     returnedAt: new Date(),
                     status: 'RETURNED',
@@ -139,6 +139,7 @@ module.exports = class BorrowerService {
             });
 
             await t.commit();
+            return borrowBookAfterUpdate;
         } catch (error) {
             await t.rollback();
             throw error;
