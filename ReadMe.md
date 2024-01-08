@@ -2,6 +2,33 @@
 
 Objective: Design and implement a simple library management system to manage books and
 borrowers.
+
+## how to setup and run the project:
+first you need to install  node.js , docker , docker-compose
+clone the project from git ,
+
+run the following commands 
+
+        npm install
+then:
+
+            npm run start 
+
+ then on other terminal after docker for postgres database up and running To create Database:
+ 
+         node scripts/createDataBase
+
+then on docker terminal:
+                    
+        npm run start:prod
+
+**if you need to run project outside docker** 
+
+please change database host to be localhost from config/config.js 
+        
+ ----       
+**it's better to use swagger for document api but due to time limit I couldn't implement it**
+-----
 ## Using Node.js , Express, Sequlize , and Postgres could implement the following : 
 ### BookModel : 
     id (PK),
